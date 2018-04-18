@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div id='app'>
+<!--     <div v-if="instructor === 'Shea'">
+      {{ instructor }} is your instructor
+    </div>
+    <div v-else-if="instructor === 'Steven'">
+      {{ instructor }} is evil and should feel bad.
+    </div> -->
+    
+    <input @keydown.enter="addStaff" type="text" v-model="userInput">
+    <input type="text" placeholder="filter" v-model="filter">
+    <select v-model="order" name="" id="">
+      <option value=""></option>
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <div :key="index" v-for="(person, index) of filtered">
+     {{ index + 1 }}. {{ person }}
+    </div>
+    
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
